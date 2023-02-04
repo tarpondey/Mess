@@ -1,0 +1,543 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Attendance Register</title> 
+	<style> 
+		table { 
+			width: 100%; 
+			border-collapse: collapse; 
+		} 
+		th, td { 
+			border: 1px solid black; 
+			padding: 8px; 
+			text-align: center; 
+		} 
+		th { 
+			background-color: #f2f2f2; 
+		}
+        body {
+        margin: 0;
+        background-color: lightgrey;
+        color: blue;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+        overflow: hidden;
+        background-color: #333;
+        }
+        input{
+            text-align: center;
+            width: 150px;
+            border-radius: 225px;
+        }
+        .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+
+        .topnav .icon {
+        display: none;
+        }
+        h1{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        p{
+            height: 50px;
+            text-align: center;
+            color: rgb(5, 3, 39);
+            font-size: 40px;
+        }
+        .button {
+        background-color: #12d318; /* Green */
+        border: none;
+        color: white;
+        
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        .container { 
+        height: 50px;
+        position: relative;
+        border: 3px solid lightgrey; 
+        }
+
+        .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        }
+        footer {
+        text-align: center;
+        padding: 3px;
+        background-color: DarkSalmon;
+        color: white;
+        }
+		@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+		h1,p,.topnav,.foot,.container {
+			width: 137%;
+		}
+	</style> 
+</head> 
+<body>
+	<div id="scratchpad">
+		<div class="topnav" id="myTopnav">
+			<a href="C:\Users\Tarpon Dey\OneDrive\Desktop\Mess\index.html">Home</a>
+			<a href="C:\Users\Tarpon Dey\OneDrive\Desktop\Mess\advance.html">Advance</a>
+			<a href="C:\Users\Tarpon Dey\OneDrive\Desktop\Mess\INandOut.html">IN And OUT</a>
+		</div>
+		<h1>Attendance Register - Month of February 2023</h1> 
+		<table id="attendance-table"> 
+			<tr> 
+				<th>
+					<select name="languages" id="lang">
+						<option value="january">January</option>
+						<option value="February">February</option>
+						<option value="march">March</option>
+						<option value="april">April</option>
+						<option value="may">May</option>
+						<option value="june">June</option>
+						<option value="July">July</option>
+						<option value="august">August</option>
+						<option value="september">September</option>
+						<option value="october">October</option>
+						<option value="november">November</option>
+						<option value="december">December</option>
+					</select>
+				</th> 
+				<th>Tarpon Dey</th> 
+				<th>Som Biswas</th> 
+				<th>Bandhu Prasad Saha</th> 
+				<th>Dinabandhu Dey</th> 
+				<th>Hemkanta Mondal</th> 
+				<th>Anup Dey</th> 
+				<th>Sayak Biswas</th> 
+			</tr> 
+			<!-- Add 28 rows for each day of the month --> 
+			<tr> 
+				<td> 1</td> 
+				<td><input type="number" value="0"  id="Tarpon-1"></td> 
+				<td><input type="number" value="0"  id="Som-1"></td> 
+				<td><input type="number" value="0"  id="Bandhu-1"></td>
+				<td><input type="number" value="0"  id="Dinu-1"></td> 
+				<td><input type="number" value="0"  id="Hem-1"></td> 
+				<td><input type="number" value="0"  id="Anup-1"></td> 
+				<td><input type="number" value="0"  id="Sayak-1"></td>
+				
+			</tr> 
+			<tr> 
+				<td> 2</td> 
+				<td><input type="number" value="0" id="Tarpon-2"></td> 
+				<td><input type="number" value="0" id="Som-2"></td> 
+				<td><input type="number" value="0" id="Bandhu-2"></td>
+				<td><input type="number" value="0" id="Dinu-2"></td> 
+				<td><input type="number" value="0" id="Hem-2"></td> 
+				<td><input type="number" value="0" id="Anup-2"></td> 
+				<td><input type="number" value="0" id="Sayak-2"></td>
+			</tr> 
+			<tr> 
+				<td> 3</td> 
+				<td><input type="number" value="0" id="Tarpon-3"></td> 
+				<td><input type="number" value="0" id="Som-3"></td> 
+				<td><input type="number" value="0" id="Bandhu-3"></td>
+				<td><input type="number" value="0" id="Dinu-3"></td> 
+				<td><input type="number" value="0" id="Hem-3"></td> 
+				<td><input type="number" value="0" id="Anup-3"></td> 
+				<td><input type="number" value="0" id="Sayak-3"></td>
+			</tr> 
+			<tr> 
+				<td> 4</td> 
+				<td><input type="number" value="0" id="Tarpon-4"></td> 
+				<td><input type="number" value="0" id="Som-4"></td> 
+				<td><input type="number" value="0" id="Bandhu-4"></td>
+				<td><input type="number" value="0" id="Dinu-4"></td> 
+				<td><input type="number" value="0" id="Hem-4"></td> 
+				<td><input type="number" value="0" id="Anup-4"></td> 
+				<td><input type="number" value="0" id="Sayak-4"></td>
+			</tr> 
+			<tr> 
+				<td> 5</td> 
+				<td><input type="number" value="0" id="Tarpon-5"></td> 
+				<td><input type="number" value="0" id="Som-5"></td> 
+				<td><input type="number" value="0" id="Bandhu-5"></td>
+				<td><input type="number" value="0" id="Dinu-5"></td> 
+				<td><input type="number" value="0" id="Hem-5"></td> 
+				<td><input type="number" value="0" id="Anup-5"></td> 
+				<td><input type="number" value="0" id="Sayak-5"></td>
+			</tr> 
+			<tr> 
+				<td> 6</td> 
+				<td><input type="number" value="0" id="Tarpon-6"></td> 
+				<td><input type="number" value="0" id="Som-6"></td> 
+				<td><input type="number" value="0" id="Bandhu-6"></td>
+				<td><input type="number" value="0" id="Dinu-6"></td> 
+				<td><input type="number" value="0" id="Hem-6"></td> 
+				<td><input type="number" value="0" id="Anup-6"></td> 
+				<td><input type="number" value="0" id="Sayak-6"></td>
+			</tr> 
+			<tr> 
+				<td> 7</td> 
+				<td><input type="number" value="0" id="Tarpon-7"></td> 
+				<td><input type="number" value="0" id="Som-7"></td> 
+				<td><input type="number" value="0" id="Bandhu-7"></td>
+				<td><input type="number" value="0" id="Dinu-7"></td> 
+				<td><input type="number" value="0" id="Hem-7"></td> 
+				<td><input type="number" value="0" id="Anup-7"></td> 
+				<td><input type="number" value="0" id="Sayak-7"></td>
+			</tr> 
+			<tr> 
+				<td> 8</td> 
+				<td><input type="number" value="0" id="Tarpon-8"></td> 
+				<td><input type="number" value="0" id="Som-8"></td> 
+				<td><input type="number" value="0" id="Bandhu-8"></td>
+				<td><input type="number" value="0" id="Dinu-8"></td> 
+				<td><input type="number" value="0" id="Hem-8"></td> 
+				<td><input type="number" value="0" id="Anup-8"></td> 
+				<td><input type="number" value="0" id="Sayak-8"></td>
+			</tr> 
+			<tr> 
+				<td> 9</td> 
+				<td><input type="number" value="0" id="Tarpon-9"></td> 
+				<td><input type="number" value="0" id="Som-9"></td> 
+				<td><input type="number" value="0" id="Bandhu-9"></td>
+				<td><input type="number" value="0" id="Dinu-9"></td> 
+				<td><input type="number" value="0" id="Hem-9"></td> 
+				<td><input type="number" value="0" id="Anup-9"></td> 
+				<td><input type="number" value="0" id="Sayak-9"></td>
+			</tr> 
+			<tr> 
+				<td> 10</td> 
+				<td><input type="number" value="0" id="Tarpon-10"></td> 
+				<td><input type="number" value="0" id="Som-10"></td> 
+				<td><input type="number" value="0" id="Bandhu-10"></td>
+				<td><input type="number" value="0" id="Dinu-10"></td> 
+				<td><input type="number" value="0" id="Hem-10"></td> 
+				<td><input type="number" value="0" id="Anup-10"></td> 
+				<td><input type="number" value="0" id="Sayak-10"></td>
+			</tr> 
+			<tr> 
+				<td> 11</td> 
+				<td><input type="number" value="0" id="Tarpon-11"></td> 
+				<td><input type="number" value="0" id="Som-11"></td> 
+				<td><input type="number" value="0" id="Bandhu-11"></td>
+				<td><input type="number" value="0" id="Dinu-11"></td> 
+				<td><input type="number" value="0" id="Hem-11"></td> 
+				<td><input type="number" value="0" id="Anup-11"></td> 
+				<td><input type="number" value="0" id="Sayak-11"></td>
+			</tr> 
+			<tr> 
+				<td> 12</td> 
+				<td><input type="number" value="0" id="Tarpon-12"></td> 
+				<td><input type="number" value="0" id="Som-12"></td> 
+				<td><input type="number" value="0" id="Bandhu-12"></td>
+				<td><input type="number" value="0" id="Dinu-12"></td> 
+				<td><input type="number" value="0" id="Hem-12"></td> 
+				<td><input type="number" value="0" id="Anup-12"></td> 
+				<td><input type="number" value="0" id="Sayak-12"></td>
+			</tr> 
+			<tr> 
+				<td> 13</td> 
+				<td><input type="number" value="0" id="Tarpon-13"></td> 
+				<td><input type="number" value="0" id="Som-13"></td> 
+				<td><input type="number" value="0" id="Bandhu-13"></td>
+				<td><input type="number" value="0" id="Dinu-13"></td> 
+				<td><input type="number" value="0" id="Hem-13"></td> 
+				<td><input type="number" value="0" id="Anup-13"></td> 
+				<td><input type="number" value="0" id="Sayak-13"></td>
+			</tr> 
+			<tr> 
+				<td> 14</td> 
+				<td><input type="number" value="0" id="Tarpon-14"></td> 
+				<td><input type="number" value="0" id="Som-14"></td> 
+				<td><input type="number" value="0" id="Bandhu-14"></td>
+				<td><input type="number" value="0" id="Dinu-14"></td> 
+				<td><input type="number" value="0" id="Hem-14"></td> 
+				<td><input type="number" value="0" id="Anup-14"></td> 
+				<td><input type="number" value="0" id="Sayak-14"></td>
+			</tr> 
+			<tr> 
+				<td> 15</td> 
+				<td><input type="number" value="0" id="Tarpon-15"></td> 
+				<td><input type="number" value="0" id="Som-15"></td> 
+				<td><input type="number" value="0" id="Bandhu-15"></td>
+				<td><input type="number" value="0" id="Dinu-15"></td> 
+				<td><input type="number" value="0" id="Hem-15"></td> 
+				<td><input type="number" value="0" id="Anup-15"></td> 
+				<td><input type="number" value="0" id="Sayak-15"></td>
+			</tr> 
+			<tr> 
+				<td> 16</td> 
+				<td><input type="number" value="0" id="Tarpon-16"></td> 
+				<td><input type="number" value="0" id="Som-16"></td> 
+				<td><input type="number" value="0" id="Bandhu-16"></td>
+				<td><input type="number" value="0" id="Dinu-16"></td> 
+				<td><input type="number" value="0" id="Hem-16"></td> 
+				<td><input type="number" value="0" id="Anup-16"></td> 
+				<td><input type="number" value="0" id="Sayak-16"></td>
+			</tr> 
+			<tr> 
+				<td> 17</td> 
+				<td><input type="number" value="0" id="Tarpon-17"></td> 
+				<td><input type="number" value="0" id="Som-17"></td> 
+				<td><input type="number" value="0" id="Bandhu-17"></td>
+				<td><input type="number" value="0" id="Dinu-17"></td> 
+				<td><input type="number" value="0" id="Hem-17"></td> 
+				<td><input type="number" value="0" id="Anup-17"></td> 
+				<td><input type="number" value="0" id="Sayak-17"></td>
+			</tr> 
+			<tr> 
+				<td> 18</td> 
+				<td><input type="number" value="0" id="Tarpon-18"></td> 
+				<td><input type="number" value="0" id="Som-18"></td> 
+				<td><input type="number" value="0" id="Bandhu-18"></td>
+				<td><input type="number" value="0" id="Dinu-18"></td> 
+				<td><input type="number" value="0" id="Hem-18"></td> 
+				<td><input type="number" value="0" id="Anup-18"></td> 
+				<td><input type="number" value="0" id="Sayak-18"></td>
+			</tr> 
+			<tr> 
+				<td> 19</td> 
+				<td><input type="number" value="0" id="Tarpon-19"></td> 
+				<td><input type="number" value="0" id="Som-19"></td> 
+				<td><input type="number" value="0" id="Bandhu-19"></td>
+				<td><input type="number" value="0" id="Dinu-19"></td> 
+				<td><input type="number" value="0" id="Hem-19"></td> 
+				<td><input type="number" value="0" id="Anup-19"></td> 
+				<td><input type="number" value="0" id="Sayak-19"></td>
+			</tr> 
+			<tr> 
+				<td> 20</td> 
+				<td><input type="number" value="0" id="Tarpon-20"></td> 
+				<td><input type="number" value="0" id="Som-20"></td> 
+				<td><input type="number" value="0" id="Bandhu-20"></td>
+				<td><input type="number" value="0" id="Dinu-20"></td> 
+				<td><input type="number" value="0" id="Hem-20"></td> 
+				<td><input type="number" value="0" id="Anup-20"></td> 
+				<td><input type="number" value="0" id="Sayak-20"></td>
+			</tr> 
+			<tr> 
+				<td> 21</td> 
+				<td><input type="number" value="0" id="Tarpon-21"></td> 
+				<td><input type="number" value="0" id="Som-21"></td> 
+				<td><input type="number" value="0" id="Bandhu-21"></td>
+				<td><input type="number" value="0" id="Dinu-21"></td> 
+				<td><input type="number" value="0" id="Hem-21"></td> 
+				<td><input type="number" value="0" id="Anup-21"></td> 
+				<td><input type="number" value="0" id="Sayak-21"></td>
+			</tr> 
+			<tr> 
+				<td> 22</td> 
+				<td><input type="number" value="0" id="Tarpon-22"></td> 
+				<td><input type="number" value="0" id="Som-22"></td> 
+				<td><input type="number" value="0" id="Bandhu-22"></td>
+				<td><input type="number" value="0" id="Dinu-22"></td> 
+				<td><input type="number" value="0" id="Hem-22"></td> 
+				<td><input type="number" value="0" id="Anup-22"></td> 
+				<td><input type="number" value="0" id="Sayak-22"></td>
+			</tr> 
+			<tr> 
+				<td> 23</td> 
+				<td><input type="number" value="0" id="Tarpon-23"></td> 
+				<td><input type="number" value="0" id="Som-23"></td> 
+				<td><input type="number" value="0" id="Bandhu-23"></td>
+				<td><input type="number" value="0" id="Dinu-23"></td> 
+				<td><input type="number" value="0" id="Hem-23"></td> 
+				<td><input type="number" value="0" id="Anup-23"></td> 
+				<td><input type="number" value="0" id="Sayak-23"></td>
+			</tr> 
+			<tr> 
+				<td> 24</td> 
+				<td><input type="number" value="0" id="Tarpon-24"></td> 
+				<td><input type="number" value="0" id="Som-24"></td> 
+				<td><input type="number" value="0" id="Bandhu-24"></td>
+				<td><input type="number" value="0" id="Dinu-24"></td> 
+				<td><input type="number" value="0" id="Hem-24"></td> 
+				<td><input type="number" value="0" id="Anup-24"></td> 
+				<td><input type="number" value="0" id="Sayak-24"></td>
+			</tr> 
+			<tr> 
+				<td> 25</td> 
+				<td><input type="number" value="0" id="Tarpon-25"></td> 
+				<td><input type="number" value="0" id="Som-25"></td> 
+				<td><input type="number" value="0" id="Bandhu-25"></td>
+				<td><input type="number" value="0" id="Dinu-25"></td> 
+				<td><input type="number" value="0" id="Hem-25"></td> 
+				<td><input type="number" value="0" id="Anup-25"></td> 
+				<td><input type="number" value="0" id="Sayak-25"></td>
+			</tr> 
+			<tr> 
+				<td> 26</td> 
+				<td><input type="number" value="0" id="Tarpon-26"></td> 
+				<td><input type="number" value="0" id="Som-26"></td> 
+				<td><input type="number" value="0" id="Bandhu-26"></td>
+				<td><input type="number" value="0" id="Dinu-26"></td> 
+				<td><input type="number" value="0" id="Hem-26"></td> 
+				<td><input type="number" value="0" id="Anup-26"></td> 
+				<td><input type="number" value="0" id="Sayak-26"></td>
+			</tr> 
+			<tr> 
+				<td> 27</td> 
+				<td><input type="number" value="0" id="Tarpon-27"></td> 
+				<td><input type="number" value="0" id="Som-27"></td> 
+				<td><input type="number" value="0" id="Bandhu-27"></td>
+				<td><input type="number" value="0" id="Dinu-27"></td> 
+				<td><input type="number" value="0" id="Hem-27"></td> 
+				<td><input type="number" value="0" id="Anup-27"></td> 
+				<td><input type="number" value="0" id="Sayak-27"></td>
+			</tr> 
+			<tr> 
+				<td> 28</td> 
+				<td><input type="number" value="0" id="Tarpon-28"></td> 
+				<td><input type="number" value="0" id="Som-28"></td> 
+				<td><input type="number" value="0" id="Bandhu-28"></td>
+				<td><input type="number" value="0" id="Dinu-28"></td> 
+				<td><input type="number" value="0" id="Hem-28"></td> 
+				<td><input type="number" value="0" id="Anup-28"></td> 
+				<td><input type="number" value="0" id="Sayak-28"></td>
+			</tr> 
+			<tr> 
+				<td> 29</td> 
+				<td><input type="number" value="0" id="Tarpon-29"></td> 
+				<td><input type="number" value="0" id="Som-29"></td> 
+				<td><input type="number" value="0" id="Bandhu-29"></td>
+				<td><input type="number" value="0" id="Dinu-29"></td> 
+				<td><input type="number" value="0" id="Hem-29"></td> 
+				<td><input type="number" value="0" id="Anup-29"></td> 
+				<td><input type="number" value="0" id="Sayak-29"></td>
+			</tr> 
+			<tr> 
+				<td> 30</td> 
+				<td><input type="number" value="0" id="Tarpon-30"></td> 
+				<td><input type="number" value="0" id="Som-30"></td> 
+				<td><input type="number" value="0" id="Bandhu-30"></td>
+				<td><input type="number" value="0" id="Dinu-30"></td> 
+				<td><input type="number" value="0" id="Hem-30"></td> 
+				<td><input type="number" value="0" id="Anup-30"></td> 
+				<td><input type="number" value="0" id="Sayak-30"></td>
+			</tr> 
+			<tr> 
+				<td> 31</td> 
+				<td><input type="number" value="0" id="Tarpon-31"></td> 
+				<td><input type="number" value="0" id="Som-31"></td> 
+				<td><input type="number" value="0" id="Bandhu-31"></td>
+				<td><input type="number" value="0" id="Dinu-31"></td> 
+				<td><input type="number" value="0" id="Hem-31"></td> 
+				<td><input type="number" value="0" id="Anup-31"></td> 
+				<td><input type="number" value="0" id="Sayak-31"></td>
+			</tr> 
+			<tr> 
+				<td>Total</td> 
+				<td><p id="tarpon">Sum: </p> </td> 
+				<td><p id="Som">Sum: </p> </td>   
+				<td><p id="Bandhu">Sum: </p> </td> 
+				<td><p id="Dinu">Sum: </p> </td> 
+				<td><p id="Hem">Sum: </p> </td> 
+				<td><p id="Anup">Sum: </p> </td> 
+				<td><p id="Sayak">Sum: </p> </td> 
+			</tr> 
+			
+		</table> 
+		<br> 
+		<div class="container">
+			<div class="center">
+				<button id="calculate-sum-button" class="button">Calculate Sum</button> 
+			</div>
+		</div>
+		
+		<p id="AllTotal">Total: </p>
+		<footer class="foot">
+			Author: Tarpon Dey<br>
+			<a href="mailto:tarpondey123@gmail.com">Mail Me</a>
+		  </footer>
+	</div>
+</body>
+    
+	<script> 
+		const calculateSumButton = document.getElementById("calculate-sum-button"); 
+		const tarponDisplay = document.getElementById("tarpon"); 
+        const somDisplay = document.getElementById("Som");
+        const bandhuDisplay = document.getElementById("Bandhu");
+        const dinuDisplay = document.getElementById("Dinu");
+        const hemDisplay = document.getElementById("Hem");
+        const anupDisplay = document.getElementById("Anup");
+        const sayakDisplay = document.getElementById("Sayak");
+        const TotalDisplay = document.getElementById("AllTotal");
+		const totalNumbers = 31; 
+		
+		calculateSumButton.addEventListener("click", function() { 
+			let sumTar = 0; 
+            let sumSom = 0;
+            let sumBandhu = 0;
+            let sumDinu = 0;
+            let sumHem = 0;
+            let sumAnup = 0;
+            let sumSayak = 0;
+			for (let i = 1; i <= totalNumbers; i++) { 
+				const inputId = `Tarpon-${i}`; 
+				const input = document.getElementById(inputId); 
+				sumTar += parseInt(input.value); 
+
+                const SomId = `Som-${i}`; 
+				const Som = document.getElementById(SomId); 
+				sumSom += parseInt(Som.value);
+
+                const BandhuId = `Bandhu-${i}`; 
+				const Bandhu = document.getElementById(BandhuId); 
+				sumBandhu += parseInt(Bandhu.value);
+
+                const DinuId = `Dinu-${i}`; 
+				const Dinu = document.getElementById(DinuId); 
+				sumDinu += parseInt(Dinu.value);
+
+                const HemId = `Hem-${i}`; 
+				const Hem = document.getElementById(HemId); 
+				sumHem += parseInt(Hem.value);
+
+                const AnupId = `Anup-${i}`; 
+				const Anup = document.getElementById(AnupId); 
+				sumAnup += parseInt(Anup.value);
+
+                const SayakId = `Sayak-${i}`; 
+				const Sayak = document.getElementById(SayakId); 
+				sumSayak += parseInt(Sayak.value);
+			} 
+			tarponDisplay.innerHTML = ` ${sumTar}`; 
+            somDisplay.innerHTML = `${sumSom}`;
+            bandhuDisplay.innerHTML = `${sumBandhu}`;
+            dinuDisplay.innerHTML = `${sumDinu}`;
+            hemDisplay.innerHTML = `${sumHem}`; 
+            anupDisplay.innerHTML = ` ${sumAnup}`;
+            sayakDisplay.innerHTML = ` ${sumSayak}`;
+            TotalDisplay.innerHTML = `Total: ${sumSayak+sumAnup+sumHem+sumDinu+sumBandhu+sumSom+sumTar}`;
+
+			
+		}); 
+		
+		
+	</script> 
+</html> 
